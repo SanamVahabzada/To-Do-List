@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 100wh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    box-sizing: border-box;
+
+}
+
+.boxes {
+    width: 80%;
+    max-width: 336px;
+    text-align: center;
+    border-top: 28px solid #FFDC40;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.headerImg{
+    width: 336px;
+}
+
+.boxes .toDoList{
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: 900px;
+    padding-top: 14px;
+    padding-bottom: 23px;
+}
+
+.filterIcon {
+    width: 100%;
+    margin-left: 120px;
+
+}
+
+input{
+    width: 286px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.removeIcon {
+    position: absolute;
+    right: 52px;
+    bottom: 10px;
+}
+
+
+.snm, .add{
+    position: relative;
+}
+
+.plusIcon{
+    position: absolute;
+}
+
+.add button{
+    background-color: #833AE0;
+    border: none;
+    border-radius: 15px;
+}
+
+.add {
+    
+}
