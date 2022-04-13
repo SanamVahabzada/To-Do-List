@@ -57,7 +57,7 @@ input{
 }
 
 
-.snm, .add{
+.inputPart, .add{
     position: relative;
 }
 
@@ -68,7 +68,7 @@ input{
 }
 
 .add button{
-    /* background-color: #833AE0; */
+    background-color: #833AE0;
     border-radius: 15px;
     width: 150px;
     height: 42px;
