@@ -44,7 +44,7 @@
 
 }
 
-input{
+#input{
     width: 286px;
     height: 40px;
     border-radius: 10px;
@@ -53,8 +53,14 @@ input{
 .removeIcon {
     position: absolute;
     right: 52px;
-    bottom: 10px;
+    bottom: 13px;
+    padding: 2px 6px;
+    border-radius: 15px;
+    border: 1px solid #cbcbcb;
+    color: #cbcbcb;
+    
 }
+
 
 
 .inputPart, .add{
@@ -75,3 +81,44 @@ input{
     margin-top: 18px;
 }
 
+.list {
+    text-align: left;
+    width: 286px;
+    position: relative;
+    /* padding: 10px; */
+    margin: 22px;
+    border: 2px solid black;
+    display: none;
+    border-radius: 8px;
+}
+
+.delete {
+    position: absolute;
+    font-size: 22px;
+    font-weight: bold;
+    right: 25px;
+    bottom: 4px;
+    padding: 0px 6px;
+    border-radius: 15px;
+    border: 1px solid #cbcbcb;
+    color: #cbcbcb;
+}
+
+.list-item {
+    position: relative;
+    padding: 10px;
+}
+
+.delete :hover {
+    color: #833AE0;
+    background-color: #833AE0;
+}
+
+.removeIcon :hover {
+    background-color: #833AE0;
+    color: #833AE0;
+}
+
+.toDoList :hover{
+    color: red;
+}
