@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
@@ -11,7 +11,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: brown; */
     box-sizing: border-box;
 
 }
@@ -26,11 +25,11 @@
 
 }
 
-.headerImg{
+.headerImg {
     width: 336px;
 }
 
-.boxes .toDoList{
+.boxes .toDoList {
     font-family: Roboto;
     font-size: 26px;
     font-weight: 900px;
@@ -41,67 +40,77 @@
 .filterIcon {
     width: 100%;
     margin-left: 120px;
-
 }
 
-#input{
+#input {
     width: 286px;
     height: 40px;
     border-radius: 10px;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
 }
 
 .removeIcon {
     position: absolute;
     right: 52px;
-    bottom: 13px;
+    bottom: 8px;
     padding: 2px 6px;
     border-radius: 15px;
-    border: 1px solid #cbcbcb;
-    color: #cbcbcb;
-    
+    color: #C4C4C4;
+    border: 1px solid #C4C4C4;
+    transform: rotate(-90deg);
+
 }
 
 
 
-.inputPart, .add{
+.inputPart, .add {
     position: relative;
 }
 
-.plusIcon{
+.plusIcon {
     position: absolute;
-    left: 110px;
-    bottom: 11px;
+    left: 94px;
+    bottom: 0px;
+    background-color: #9953f1;
+    width: 42px;
+    height: 42px;
+    border-radius: 71px;
 }
 
-.add button{
+.plusIcon img {
+    padding-top: 16px;
+}
+
+.add button {
     background-color: #833AE0;
-    border-radius: 15px;
+    border-radius: 71px;
     width: 150px;
     height: 42px;
     margin-top: 18px;
+    border: none;
+    color: white;
 }
 
 .list {
     text-align: left;
     width: 286px;
     position: relative;
-    /* padding: 10px; */
     margin: 22px;
-    border: 2px solid black;
+    border: 1px solid #C4C4C4;
     display: none;
     border-radius: 8px;
 }
 
 .delete {
     position: absolute;
-    font-size: 22px;
-    font-weight: bold;
     right: 25px;
     bottom: 4px;
-    padding: 0px 6px;
+    padding: 2px 6px;
     border-radius: 15px;
-    border: 1px solid #cbcbcb;
-    color: #cbcbcb;
+    color: #C4C4C4;
+    border: 1px solid #C4C4C4;
+    transform: rotate(-90deg);
 }
 
 .list-item {
@@ -109,16 +118,23 @@
     padding: 10px;
 }
 
-.delete :hover {
-    color: #833AE0;
+.delete:hover {
     background-color: #833AE0;
 }
 
-.removeIcon :hover {
+.removeIcon:hover {
     background-color: #833AE0;
-    color: #833AE0;
 }
 
-.toDoList :hover{
+.error {
     color: red;
+    display: none;
+}
+
+.filterIcon img:hover {
+    opacity: 1;
+}
+
+.filterIcon img {
+    opacity: 0.3;
 }
