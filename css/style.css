@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 * {
     margin: 0px;
     padding: 0px;
@@ -7,7 +6,7 @@
 
 .container {
     width: 100wh;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,42 +29,51 @@
 }
 
 .boxes .toDoList {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 26px;
-    font-weight: 900px;
-    padding-top: 14px;
-    padding-bottom: 23px;
+    padding-top: 12px;
+    padding-bottom: 19px;
+    font-weight: 900;
 }
 
-.filterIcon {
+.filterIcon, #sort {
     width: 100%;
-    margin-left: 120px;
+    margin-left: 125px;
+    margin-bottom: 7px;
 }
 
 #input {
+    margin-left: 6px;
     width: 286px;
     height: 40px;
     border-radius: 10px;
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
+    padding-left: 25px;
+    font-size: 14px;
 }
 
-.removeIcon {
+.removeIcon, .delete {
+    cursor: pointer;
     position: absolute;
     right: 52px;
-    bottom: 8px;
-    padding: 2px 6px;
+    bottom: 10px;
+    font-size: 10px;
+    padding: 2px 5px;
     border-radius: 15px;
     color: #C4C4C4;
     border: 1px solid #C4C4C4;
     transform: rotate(-90deg);
-
 }
 
-
+.delete {
+    right: 30px;
+    bottom: 11px;
+}
 
 .inputPart, .add {
     position: relative;
+    margin-bottom: 18px;
 }
 
 .plusIcon {
@@ -87,35 +95,26 @@
     border-radius: 71px;
     width: 150px;
     height: 42px;
-    margin-top: 18px;
+    /* margin-top: 18px; */
     border: none;
     color: white;
 }
 
 .list {
     text-align: left;
-    width: 286px;
+    width: 283px;
     position: relative;
-    margin: 22px;
+    margin: 8px 29px;
     border: 1px solid #C4C4C4;
     display: none;
-    border-radius: 8px;
+    border-radius: 10px;
+    margin-bottom: 17px;
 }
 
-.delete {
-    position: absolute;
-    right: 25px;
-    bottom: 4px;
-    padding: 2px 6px;
-    border-radius: 15px;
-    color: #C4C4C4;
-    border: 1px solid #C4C4C4;
-    transform: rotate(-90deg);
-}
-
-.list-item {
+.created-list {
     position: relative;
-    padding: 10px;
+    padding: 12px 25px;
+    font-size: 14px;
 }
 
 .delete:hover {
@@ -137,4 +136,8 @@
 
 .filterIcon img {
     opacity: 0.3;
+}
+
+#sort {
+    display: none;
 }
