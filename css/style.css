@@ -6,7 +6,7 @@
 
 .container {
     width: 100wh;
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,6 @@
     border-top: 28px solid #FFDC40;
     border-radius: 10px;
     box-sizing: border-box;
-
 }
 
 .headerImg {
@@ -95,7 +94,6 @@
     border-radius: 71px;
     width: 150px;
     height: 42px;
-    /* margin-top: 18px; */
     border: none;
     color: white;
 }
