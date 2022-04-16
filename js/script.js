@@ -66,6 +66,8 @@ function sort() {
         filter.style.display = 'none'
         sortIcon.style.display = 'block';
         inputPart.style.display = 'none';
+        error.style.display = 'none';
+
 
     } else if (a === 2) {
         arr.sort().reverse();
@@ -76,6 +78,7 @@ function sort() {
         sortIcon.style.display = 'none';
         filter.style.display = 'block';
         inputPart.style.display = 'none';
+
     }
 
     else {
@@ -91,3 +94,9 @@ function sort() {
 }
 filter.addEventListener('click', sort);
 sortIcon.addEventListener('click', sort);
+
+document.addEventListener('keypress', (event) => {
+    if(event.keyCode === 13){
+        create();
+    }
+});
