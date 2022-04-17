@@ -99,7 +99,7 @@ function sort() {
             });
             filter.style.display = 'none'
             sortIcon.style.display = 'block';
-            inputPart.style.display = 'block';
+            input.parentElement.style.display = 'block';
         }
 
         // with the second click, sort in reverse alphabetical order and create input
@@ -110,7 +110,7 @@ function sort() {
             });
             filter.style.display = 'block'
             sortIcon.style.display = 'none';
-            inputPart.style.display = 'block';
+            input.parentElement.style.display = 'block';
             a = 0;
         }
     }
