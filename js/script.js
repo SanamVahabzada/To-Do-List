@@ -1,15 +1,12 @@
 let add = document.querySelector('button');
 let list = document.querySelector('.list');
 let input = document.querySelector('input');
-let inputPart = document.querySelector('.inputPart');
 let filter = document.querySelector('.filterIcon');
 let remove = document.querySelector('.removeIcon');
 let error = document.querySelector('.error');
 let sortIcon = document.querySelector('#sort');
 
-
-
-
+// a list section creating function
 function create() {
     let p = document.createElement('p');
     p.className = "created-list";
@@ -35,6 +32,7 @@ function create() {
     }
     input.value = "";
 
+    // deleting the created section
     span.addEventListener('click', () => {
         p.remove();
         if (list.innerHTML == '') {
@@ -43,13 +41,22 @@ function create() {
     });
 }
 
+// creates a list section on CLİCK
+add.addEventListener('click', create);
+
+// creates a list section with ENTER
+document.addEventListener('keypress', (event) => {
+    if (event.keyCode === 13) {
+        create();
+    }
+});
+
+// deleting the inside of the İNPUT
 remove.addEventListener('click', () => {
     input.value = "";
 });
 
-add.addEventListener('click', create);
-
-
+// that SORTS the created list function
 let a = 0;
 function sort() {
     a++;
@@ -58,45 +65,57 @@ function sort() {
     listItems.forEach(items => {
         arr.push(items.innerText);
     });
-    if (a === 1) {
-        arr.sort()
-        arr.forEach((item, i) => {
-            listItems[i].innerText = item;
-        });
-        filter.style.display = 'none'
-        sortIcon.style.display = 'block';
-        inputPart.style.display = 'none';
-        error.style.display = 'none';
 
+    // sort in alphabetical order in the first click and delete input
+    if (list.innerHTML !== '') {
+        if (a === 1) {
+            arr.sort()
+            arr.forEach((item, i) => {
+                listItems[i].innerText = item;
+            });
+            filter.style.display = 'none'
+            sortIcon.style.display = 'block';
+            input.parentElement.style.display = 'none';
+            error.style.display = 'none';
 
-    } else if (a === 2) {
-        arr.sort().reverse();
-        arr.forEach((item, i) => {
-            listItems[i].innerText = item;
-        });
+            // with the second click, sort in reverse alphabetical order and delete input
+        } else if (a === 2) {
+            arr.sort().reverse();
+            arr.forEach((item, i) => {
+                listItems[i].innerText = item;
+            });
 
-        sortIcon.style.display = 'none';
-        filter.style.display = 'block';
-        inputPart.style.display = 'none';
+            sortIcon.style.display = 'none';
+            filter.style.display = 'block';
+            input.parentElement.style.display = 'none';
 
-    }
+        }
 
-    else {
-        arr.sort()
-        arr.forEach((item, i) => {
-            listItems[i].innerText = item;
-        });
-        filter.style.display = 'none'
-        sortIcon.style.display = 'block';
-        inputPart.style.display = 'block';
-        a = 0;
+        // sort in alphabetical order in the third click and create input
+        else if (a === 3) {
+            arr.sort()
+            arr.forEach((item, i) => {
+                listItems[i].innerText = item;
+            });
+            filter.style.display = 'none'
+            sortIcon.style.display = 'block';
+            inputPart.style.display = 'block';
+        }
+
+        // with the second click, sort in reverse alphabetical order and create input
+        else {
+            arr.sort().reverse();
+            arr.forEach((item, i) => {
+                listItems[i].innerText = item;
+            });
+            filter.style.display = 'block'
+            sortIcon.style.display = 'none';
+            inputPart.style.display = 'block';
+            a = 0;
+        }
     }
 }
+
+// SORTS the create list
 filter.addEventListener('click', sort);
 sortIcon.addEventListener('click', sort);
-
-document.addEventListener('keypress', (event) => {
-    if(event.keyCode === 13){
-        create();
-    }
-});

@@ -5,34 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 
 <body>
 
     <div class="container">
         <div class="boxes">
+            <!-- header section creating-->
             <p class="toDoList">To-Do List</p>
 
+            <!-- sort icon section creating -->
             <div class="filterIcon"> <img src="./images/Group73.svg" alt="filter icon"> </div>
             <div id="sort" > <img src="./images/Group91.svg" alt="filter icon"> </div>
+
+            <!-- input section creating -->
             <div class="inputPart">
                 <input type="text" id="input" required>
                 <div class="removeIcon">&#10006;</div>
             </div>
+
+            <!-- Error section creating -->
             <span class="error"> &#9888; You must write something! </span>
+
+            <!-- A list section creating -->
             <div class="list"></div>
 
+            <!-- Add button section creating-->
             <div class="add">
                 <button>Add</button>
                 <div class="plusIcon">
                     <img src="./images/+.svg" alt="Plus Icon">
                 </div>
             </div>
-
-
         </div>
     </div>
 
