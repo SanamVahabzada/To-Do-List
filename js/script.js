@@ -37,6 +37,7 @@ function create() {
         p.remove();
         if (list.innerHTML == '') {
             list.style.display = 'none';
+            input.parentElement.style.display = 'block';
         }
     });
 }
