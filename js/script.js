@@ -76,7 +76,7 @@ function sort() {
         arr.push(items.innerText);
     });
 
-    if(error.style.display = 'block') {
+    if (error.style.display = 'block') {
         error.style.display = 'none';
     }
 
