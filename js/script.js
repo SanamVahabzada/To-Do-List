@@ -40,6 +40,11 @@ function create() {
             input.parentElement.style.display = 'block';
         }
     });
+
+    if (input.parentElement.style.display == 'none') {
+        input.parentElement.style.display = 'block';
+        error.style.display = 'none';
+    }
 }
 
 // creates a list section on CLİCK
@@ -120,3 +125,18 @@ function sort() {
 // SORTS the create list
 filter.addEventListener('click', sort);
 sortIcon.addEventListener('click', sort);
+
+
+// function allowDrop(ev) {
+//     ev.preventDefault();
+//   }
+  
+//   function drag(ev) {
+//     ev.dataTransfer.setData("text", ev.target.id);
+//   }
+  
+//   function drop(ev) {
+//     ev.preventDefault();
+//     let data = ev.dataTransfer.getData("text");
+//     ev.target.appendChild(document.getElementById(data));
+//   }
