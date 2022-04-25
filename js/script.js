@@ -6,6 +6,25 @@ let remove = document.querySelector('.removeIcon');
 let error = document.querySelector('.error');
 let sortIcon = document.querySelector('#sort');
 
+// creates a list section on CLİCK
+add.addEventListener('click', create);
+
+// SORTS the create list
+filter.addEventListener('click', sort);
+sortIcon.addEventListener('click', sort);
+
+// creates a list section with ENTER
+document.addEventListener('keypress', (event) => {
+    if (event.keyCode === 13) {
+        create();
+    }
+});
+
+// deleting the inside of the İNPUT
+remove.addEventListener('click', () => {
+    input.value = "";
+});
+
 // a list section creating function
 function create() {
     let p = document.createElement('p');
@@ -47,21 +66,6 @@ function create() {
     }
 }
 
-// creates a list section on CLİCK
-add.addEventListener('click', create);
-
-// creates a list section with ENTER
-document.addEventListener('keypress', (event) => {
-    if (event.keyCode === 13) {
-        create();
-    }
-});
-
-// deleting the inside of the İNPUT
-remove.addEventListener('click', () => {
-    input.value = "";
-});
-
 // that SORTS the created list function
 let a = 0;
 function sort() {
@@ -71,6 +75,10 @@ function sort() {
     listItems.forEach(items => {
         arr.push(items.innerText);
     });
+
+    if(error.style.display = 'block') {
+        error.style.display = 'none';
+    }
 
     // sort in alphabetical order in the first click and delete input
     if (list.innerHTML !== '') {
@@ -121,22 +129,3 @@ function sort() {
         }
     }
 }
-
-// SORTS the create list
-filter.addEventListener('click', sort);
-sortIcon.addEventListener('click', sort);
-
-
-// function allowDrop(ev) {
-//     ev.preventDefault();
-//   }
-  
-//   function drag(ev) {
-//     ev.dataTransfer.setData("text", ev.target.id);
-//   }
-  
-//   function drop(ev) {
-//     ev.preventDefault();
-//     let data = ev.dataTransfer.getData("text");
-//     ev.target.appendChild(document.getElementById(data));
-//   }
